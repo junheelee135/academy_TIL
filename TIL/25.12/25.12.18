@@ -5,3 +5,13 @@ J-Query - 비동기 개발 간편
 app - 리액트, 뷰로 개발 간편
 
 SPA(single page application)- 하나의 페이지만 개발
+
+CSS Selector
+ E1 E2  : E1 요소의 자식인 모든 E2 요소와 일치. 자손(후손) 결합자
+	 E1 > E2 : E1 요소 바로 아래 자식인 E2 요소와 일치. 자식 결합자(>)
+	 E1 + E2 : E1 요소의 바로 다음에 나오는 형제요소 E2와 일치. 인접 형제 결합자(+)
+	 E1 ~ E2 : E1 요소의 다음에 나오는 모든 형제 E2와 일치. 일반 형제 결합자(~) 
+$(function() {
+		$('form input+ span').hide();
+		$('form input[type=text]').css('border','1px solid #aaa');
+	});
